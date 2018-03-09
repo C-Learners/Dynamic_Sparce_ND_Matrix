@@ -11,7 +11,7 @@ There is a particular variable: "level".
 
 Let's say you have a 3D matrix.
 
-You can see it as a vector (level 2) of vectors (level 1) of actual vectors (level 0) of element.
+You can see it as a vector (level 2) of vectors (level 1) of actual vectors (level 0) of elements.
 
 So this n-dimensional matrix is implemented as a sparse vector (level n-1) of sparse vetors (level n-2) of sparse vectors, etc...
 
