@@ -73,25 +73,25 @@ void* peek(Node* m, int* index)
 void menuInsert(Node** m, int n)
 {
 	printf("\nInsert position: ");
-    int i;
-    int* index = calloc(n, sizeof *index);
-    for (i=n-1; i>=0; --i) scanf("%d", index+i);
+	int i;
+	int* index = calloc(n, sizeof *index);
+	for (i=n-1; i>=0; --i) scanf("%d", index+i);
 
-    printf("\nInsert element (string): ");
-    char* string = calloc(MAXLINE, sizeof *string);
-    fflush(stdin);
-    fgets(string, MAXLINE-1, stdin);
-    string[strlen(string)] = 0; //set null character
+	printf("\nInsert element (string): ");
+	char* string = calloc(MAXLINE, sizeof *string);
+	fflush(stdin);
+	fgets(string, MAXLINE-1, stdin);
+	string[strlen(string)] = 0; //set null character
 
-    *m = push(*m, string, index, n-1);
+	*m = push(*m, string, index, n-1);
 }
 
 void menuGet(Node** m, int n)
 {
 	printf("\nInsert position: ");
-    int i;
-    int* index = calloc(n, sizeof *index);
-    for (i=n-1; i>=0; --i) scanf("%d", index+i);
+	int i;
+	int* index = calloc(n, sizeof *index);
+	for (i=n-1; i>=0; --i) scanf("%d", index+i);
 
 	char* string = calloc(MAXLINE, sizeof *string);
 	string = peek(*m, index+n-1);
@@ -102,12 +102,12 @@ void menuGet(Node** m, int n)
 int main()	//Usage example with strings
 {
 	int n;
-    printf("Numer of dimentions: ");
-    scanf("%d", &n);
+	printf("Numer of dimentions: ");
+	scanf("%d", &n);
 
-    Node* m = NULL; //matrix
-    int choice = 1;
-    while (choice) {
+	Node* m = NULL; //matrix
+	int choice = 1;
+	while (choice) {
 		printf("\n1 - Insert a value;");
 		printf("\n2 - Get a value;");
 		printf("\n0 - Exit.");
@@ -123,6 +123,6 @@ int main()	//Usage example with strings
 		default:
 			break;
 		}
-    }
-    return 0;
+	}
+	return 0;
 }
